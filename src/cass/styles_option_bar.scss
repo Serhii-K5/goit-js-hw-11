@@ -1,0 +1,122 @@
+
+.options-menu {
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #3f57b3;
+  width: 320px;
+  text-decoration-line: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  // box-shadow: 0px 6px 3px rgba(21, 1, 68, 0.1), 0px 4px 5px rgba(14, 2, 68, 0.1),
+  //   0px 4px 4px rgba(5, 1, 46, 0.15);
+}
+
+.options-menu span {
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #3f57b3;
+}
+
+#info-btn {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-color: #fff;
+  color: #fff;
+  font-size: 10px;
+  background-color: #3f57b3;
+}
+
+
+.option-bar {
+  margin: auto;
+  padding: 10px;
+  background-color: lightgray;
+  color: var(--primary-text-color);
+  // width: fit-content;
+  width: 320px;
+  // border-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.1),
+    0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.option-group {
+  display: flex;
+}
+
+.option-group p {
+  margin-top: 10px;
+  line-height: 0;
+  justify-content: baseline;
+}
+
+.option-input {
+  width: 45px;
+  height: 22px;
+  margin-left: auto;
+}
+
+.labels p,
+.on-off-state p {
+  line-height: 1.2;
+}
+
+.on-off-buttons {
+  display: block;
+  width: 65px;
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.on-off-buttons button {
+  width: 60px;
+  height: 25px;
+  border-radius: 12px;
+}
+
+.on-off-buttons button:not(:first-child) {
+  margin-top: 10px;
+}
+
+#on-off-btn-auto-scroll,
+#on-off-btn-endless-scroll,
+#on-off-btn-music {
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+#on-off-btn-smooth-scroll {
+  text-align: right;
+  color: #00ff00;
+}
+
+.on-off-state{
+  width: 20px;
+}
+
+.help {
+  font-size: small;
+  line-height: 1.0;
+}
+
+.audio-gallery {
+  display: none;
+}
+
+// #js-play,
+#js-play1,
+#js-play2,
+#js-play3,
+#js-play4 {
+  display: none;
+}

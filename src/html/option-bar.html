@@ -1,0 +1,48 @@
+<div class="options-menu">
+  <span>Options menu</span>
+  <a href="./help.txt" target="_blank"><button id="info-btn" type="button">?</button></a>
+</div>
+<div class="option-bar" id="option-bar">
+  <div class="option-group">
+    <p>Number of objects per page</p>
+    <input
+      class="option-input"
+      type="number"
+      stap="1"
+      autocomplete="off"
+      value="40"
+      placeholder="20"
+    />
+  </div>
+  <div class="option-group">
+    <div class="labels">
+      <p>Smooth scroll</p>
+      <p id="p-smooth-scroll">Auto-scroll</p>
+      <p>Endless scroll</p>
+      <p>Music</p>
+    </div>
+    <div class="on-off-buttons">
+      <button id="on-off-btn-smooth-scroll" type="button"><b>O</b></button>
+      <button id="on-off-btn-auto-scroll" type="button"><b>O</b></button>
+      <button id="on-off-btn-endless-scroll" type="button"><b>O</b></button>
+      <button id="on-off-btn-music" type="button"><b>O</b></button>
+    </div>
+    <div class="on-off-state">
+      <p id="on-off-state-smooth-scroll">on</p>
+      <p id="on-off-state-auto-scroll">off</p>
+      <p id="on-off-state-endless-scroll">off</p>
+      <p id="on-off-state-music">off</p>
+    </div>
+  </div>
+  <div class="audio-gallery" stile="display: none">
+    <!-- <audio src="./music-gallery/nice.wav"id="js-play" controls autoplay loop></audio> -->
+    <audio src="./music-gallery/nice.wav" id="js-play" controls></audio>
+    <audio src="./music-gallery/catch-it-117676.wav" id="js-play1" controls></audio>
+    <audio src="./music-gallery/emotional-inspiring-story-125992.wav" id="js-play2" controls></audio>
+    <audio src="./music-gallery/inspired-ambient-141686.wav" id="js-play3" controls></audio>
+    <audio src="./music-gallery/synth-pop-110351.wav" id="js-play4" controls></audio>
+    <span id="audio-track"></span>
+  </div>
+
+  <p class="help"><i>* Use the "?" symbol for help. Help opens in a new window </i></p>
+</div>
