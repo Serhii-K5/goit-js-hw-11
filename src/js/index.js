@@ -22,7 +22,7 @@ let perPage =
     ? document.querySelector('.option-input').value
     : 40;
 let page = 1;
-isMessage = true;  // захист від повторних сповіщень
+let isMessage = true;  // захист від повторних сповіщень
 
 loadMoreBtn.style.display = 'none';
 
