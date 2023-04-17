@@ -310,7 +310,6 @@ function smoothScroll(evt) {
     window.scrollBy({
       top: cardHeight * coefficient,
     });
-    return;
   } else {
     // запуск плавного скролу за допомогою  behavior
     window.scrollBy({                   
