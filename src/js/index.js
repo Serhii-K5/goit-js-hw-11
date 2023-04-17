@@ -290,24 +290,34 @@ window.addEventListener('scroll', () => {
 window.addEventListener('click', smoothScroll);
 
 function smoothScroll(evt) {
-  if (evt.target.className !== 'gallery' && evt.target.tagName !== 'BODY') {
+  if (evt.target.className !== 'gallery' && evt.target.tagName !== 'BODY') {  // фільтр для спрацьовування поза галереєю 
     return;
   }
 
-  if (galleryDiv.childElementCount < 1) {
+  if (galleryDiv.childElementCount < 1) { // перевірка наявності єлементів в галереї
     return;
   }
 
   const { height: cardHeight } = document
     .querySelector('.gallery')
-    .firstElementChild.getBoundingClientRect();
+    .firstElementChild.getBoundingClientRect();    // висота першого елемента галереї
+  
+  oldPageYOffset = window.pageYOffset;  // призупиняє виконання попередньо запущеного скролу
 
-  coefficient = evt.pageY < window.pageYOffset + window.innerHeight / 2 ? -2 : 2;
+  coefficient = evt.pageY < window.pageYOffset + window.innerHeight / 2 ? -2 : 2;  // задає напрям скролу
 
-  window.scrollBy({
-    top: cardHeight * coefficient,
-    behavior: 'smooth',
-  });
+  if (btnOffSmoothScroll.style.textAlign === 'left') {   // перехід по сторінці без плавного скролу
+    window.scrollBy({
+      top: cardHeight * coefficient,
+    });
+    return;
+  } else {
+    // запуск плавного скролу за допомогою  behavior
+    window.scrollBy({                   
+      top: cardHeight * coefficient,
+      behavior: 'smooth',
+    });
+  }
 }
 // <-- кінець блока плавного скрола
 
