@@ -22,6 +22,7 @@ let perPage =
     ? document.querySelector('.option-input').value
     : 40;
 let page = 1;
+let isMessage = true;  // захист від повторних сповіщень
 
 loadMoreBtn.style.display = 'none';
 
@@ -90,6 +91,7 @@ function messageOutput() {
           optionBar.style.display = 'block';
           optionMenu.style.display = 'block';
         }
+        isMessage = true;
       })
       .catch(error => {
         console.error(error);
@@ -260,6 +262,7 @@ window.addEventListener('scroll', () => {
       messageOutput();
     }
   }
+
   // -- блок плавності скролу
   if (stateOffAutoScroll.textContent === 'off') {
     if (counter < 100) {
@@ -276,13 +279,22 @@ window.addEventListener('scroll', () => {
       window.pageYOffset < oldPageYOffset
         ? -50
         : window.pageYOffset > oldPageYOffset
-        ? 50
-        : coefficient;
+          ? 50
+          : coefficient;
 
     oldPageYOffset = window.pageYOffset;
     window.scrollBy({
       top: cardHeight / coefficient,
     });
+
+    if (document.documentElement.offsetHeight - window.pageYOffset - 1 < document.documentElement.clientHeight && loadMoreBtn.style.display === 'none') {
+      if(isMessage){
+        Notiflix.Notify.failure(
+          "We're sorry, but you've reached the end of search results."
+        );
+        isMessage = false;
+      }
+    }
   }
 });
 
